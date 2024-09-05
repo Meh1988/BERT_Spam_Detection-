@@ -12,27 +12,13 @@ The objective of this project is to create an effective spam detection system us
 
 The dataset used is the [Dataset Card for the SpamAssassin public mail corpus]([https://archive.ics.uci.edu/ml/datasets/sms+spam+collection](https://huggingface.co/datasets/talby/spamassassin)), which a selection of mail messages, suitable for use in testing spam filtering systems assembled by members of the SpamAssassin project. The dataset is available in a tab-separated format and is included in the repository.
 
-Dataset Structure
-Data Instances
-Text Config:
+Dataset Structure: Data Fields
+- **label**: Indicates if the message is 'spam' or 'ham'.
+- **group**: Categorized by SpamAssassin into categories: {'hard_ham', 'spam_2', 'spam', 'easy_ham', 'easy_ham_2'}.
+- **text**: The normalized text of the message bodies.
+- **raw**: The full binary headers and contents of messages.
 
-Normalizes all character sets to UTF-8.
-Dumps the MIME tree as a JSON list of lists.
-Unprocessed Config:
 
-Does not parse messages.
-Leaves the full headers and content as binary.
-Data Fields
-label: Indicates if the message is 'spam' or 'ham'.
-group: Categorized by SpamAssassin into categories: {'hard_ham', 'spam_2', 'spam', 'easy_ham', 'easy_ham_2'}.
-text: The normalized text of the message bodies.
-raw: The full binary headers and contents of messages.
-Data Splits
-Train: Only a training split is provided.
-
-Dataset Creation
-Curation Rationale
-It is hoped this dataset can help verify that modern NLP tools can solve old NLP problems.
 
 
 ## Features
