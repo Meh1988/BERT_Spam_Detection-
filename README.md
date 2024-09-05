@@ -10,7 +10,24 @@ The objective of this project is to create an effective spam detection system us
 
 ## Dataset
 
-The dataset used is the [SMS Spam Collection Dataset](https://archive.ics.uci.edu/ml/datasets/sms+spam+collection), which contains SMS messages classified as 'ham' (non-spam) or 'spam'. The dataset is available in a tab-separated format and is included in the repository.
+The dataset used is the [Dataset Card for the SpamAssassin public mail corpus]([https://archive.ics.uci.edu/ml/datasets/sms+spam+collection](https://huggingface.co/datasets/talby/spamassassin)), which a selection of mail messages, suitable for use in testing spam filtering systems assembled by members of the SpamAssassin project. The dataset is available in a tab-separated format and is included in the repository.
+
+Dataset Structure:
+  Data Instances:
+    The text config normalizes all character sets to utf8 and dumps the MIME tree as a JSON list of lists.
+    The unprocessed config does not parse messages at all, leaving the full headers and content as binary.
+  Data Fields:
+    label: spam or ham
+    group: SpamAssassin has grouped these samples into categories {'hard_ham', 'spam_2', 'spam', 'easy_ham', 'easy_ham_2'}
+    text: normalized text of the message bodies
+    raw: full binary headers and contents of messages
+  Data Splits
+    Only a train split has been provided.
+
+Dataset Creation
+Curation Rationale
+It is hoped this dataset can help verify that modern NLP tools can solve old NLP problems.
+
 
 ## Features
 
