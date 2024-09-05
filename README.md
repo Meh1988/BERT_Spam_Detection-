@@ -1,5 +1,5 @@
 # BERT_Spam_Detection
-Spam detection using BERT and the SMS Spam Collection dataset. The model is built with PyTorch and Hugging Face Transformers. The code includes data preprocessing, model training, evaluation, and predictions.
+Spam detection using BERT and the SpamAssassin dataset. The model is built with PyTorch and Hugging Face Transformers. The code includes data preprocessing, model training, evaluation, and predictions.
 
 
 This project demonstrates how to build a spam detection model using BERT with PyTorch and the Hugging Face `transformers` library. The model is trained on the SMS Spam Collection dataset, a commonly used dataset for spam classification.
